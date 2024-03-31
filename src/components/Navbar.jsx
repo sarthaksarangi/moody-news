@@ -1,12 +1,17 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
+  const activeLink = "text-button";
+  const notActiveLink = "text-gray-900";
   return (
     <>
       <nav className="bg-white border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-7 border-b-2 border-black">
-          <Link className="self-center text-3xl font-semibold whitespace-nowrap">
+          <Link
+            className="self-center text-3xl font-semibold whitespace-nowrap"
+            to="/"
+          >
             Moody News
           </Link>
 
@@ -36,34 +41,57 @@ const Navbar = () => {
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
-              <li>
-                <NavLink
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-button md:p-0 hover:text-blue-800 text-lg"
-                  aria-current="page"
-                >
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeLink : notActiveLink
+                }
+                to="/"
+              >
+                <li className="block py-2 px-3  rounded md:bg-transparent  md:p-0 hover:text-button text-lg">
                   Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="block py-2 px-3 text-gray-900 rounded  hover:bg-gray-100  md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg cursor-pointer">
-                  News
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg">
-                  About
-                </NavLink>
-              </li>
+                </li>
+              </NavLink>
 
-              <li>
-                <NavLink className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeLink : notActiveLink
+                }
+                to="/news"
+              >
+                <li className="block py-2 px-3  rounded  hover:bg-gray-100  md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg cursor-pointer">
+                  News
+                </li>
+              </NavLink>
+
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeLink : notActiveLink
+                }
+                to="/about"
+              >
+                <li className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg">
+                  About
+                </li>
+              </NavLink>
+
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeLink : notActiveLink
+                }
+                to="/contact"
+              >
+                <li
+                  className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg
+                "
+                >
                   Contact
-                </NavLink>
-              </li>
+                </li>
+              </NavLink>
             </ul>
           </div>
         </div>
       </nav>
+      <Outlet />
     </>
   );
 };
