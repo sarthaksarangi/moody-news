@@ -1,11 +1,22 @@
 import React from 'react'
+import  {Link}  from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div>
-      Navbar
-    </div>
+    <>
+    <nav>
+        <div className="first">
+        <h1>Moody News</h1>
+        </div>
+        <div className="second">
+            <Link to={'/'}>Home</Link>
+        </div>
+        
+    </nav>
+    </>
   )
 }
+
+
 
 export default Navbar
