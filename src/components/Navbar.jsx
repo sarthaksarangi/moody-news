@@ -38,20 +38,20 @@ const Navbar = () => {
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
               <li>
                 <NavLink
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-button md:p-0 hover:text-blue-800"
+                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-button md:p-0 hover:text-blue-800 text-lg"
                   aria-current="page"
                 >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0">
+                <NavLink className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg">
                   About
                 </NavLink>
               </li>
 
               <li>
-                <NavLink className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0">
+                <NavLink className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg">
                   Contact
                 </NavLink>
               </li>

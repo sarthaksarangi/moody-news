@@ -12,7 +12,7 @@ export default {
         "button-text": "#1f1235",
       },
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
     },
   },
