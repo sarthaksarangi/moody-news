@@ -1,3 +1,4 @@
+import Category from "./components/Category";
 import GenNews from "./components/GenNews";
 import Header from "./components/Header";
 
@@ -7,6 +8,7 @@ function App() {
       <div className=" mx-auto  min-w-fit">
         <Header />
         <GenNews />
+        <Category />
       </div>
     </>
   );
