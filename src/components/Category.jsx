@@ -31,7 +31,7 @@ const Category = () => {
           type="button"
           class="focus:outline-none text-white bg-red-500 px-8 py-3.5 hover:bg-red-600 focus:ring-4 focus:ring-red-300 font-medium text-sm me-2 rounded-full mr-5 mb-6  "
         >
-          Not So Good
+          Sad
         </button>
       </div>
     </div>
