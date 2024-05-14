@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="about  text-black px-40 py-2 flex flex-col items-center justify-center h-screen gap-4 ">
+    <section className="about  text-black px-60 py-2 flex flex-col items-center justify-center h-screen gap-4 ">
       <h1 className="text-4xl font-bold text-center  border-b-2 border-black mb-3">
         Moody News: Feel-Good News for You
       </h1>
@@ -24,11 +24,25 @@ function About() {
           alt="Moody News Illustration"
         />
       </div>
+      <div className="flex flex-wrap justify-center gap-4">
+        <div className="bg-slate-800 text-white rounded-full px-6 py-2 font-bold text-center">
+          Machine Learning
+        </div>
+        <div className="bg-slate-800 text-white rounded-full px-6 py-2 font-bold text-center">
+          Sentiment Analysis
+        </div>
+        <div className="bg-slate-800 text-white rounded-full px-6 py-2 font-bold text-center">
+          Text Summarization
+        </div>
+        <div className="bg-slate-800 text-white rounded-full px-6 py-2 font-bold text-center">
+          React
+        </div>
+      </div>
       <div className="flex justify-center gap-4">
-        <button className="bg-button hover:bg-blue-700 text-white font-bold py-3 px-4  shadow-md  rounded-full">
+        <button className="bg-button hover:bg-blue-700 text-white font-bold py-3 px-6  shadow-md  rounded-full">
           Feel Good Now
         </button>
-        <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full shadow-md">
+        <button className="bg-gray-200 hover:bg-gray-300 text-slate-700 font-bold py-2 px-6 rounded-full shadow-md">
           Browse All News
         </button>
       </div>
