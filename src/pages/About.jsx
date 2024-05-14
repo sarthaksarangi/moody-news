@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="about  text-black px-40 py-20 flex flex-col items-center justify-center h-screen gap-8 ">
+    <section className="about  text-black px-40 py-2 flex flex-col items-center justify-center h-screen gap-4 ">
       <h1 className="text-4xl font-bold text-center  border-b-2 border-black mb-3">
         Moody News: Feel-Good News for You
       </h1>
