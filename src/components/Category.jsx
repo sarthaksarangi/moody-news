@@ -25,7 +25,7 @@ const Category = () => {
           type="button"
           class="focus:outline-none text-white bg-orange-500 px-8 py-3.5 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium text-sm me-2  rounded-full mr-5 mb-6  "
         >
-          Motivational
+          Neutral
         </button>
         <button
           type="button"

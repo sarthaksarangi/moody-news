@@ -13,7 +13,7 @@ const Readmore = ({ children }) => {
         {isReadmore ? text : text.slice(0, 100)}
         <span
           onClick={toggleReadmore}
-          className="read-or-hide"
+          className=" cursor-pointer"
           style={{ color: "green" }}
         >
           {isReadmore ? " show less." : "...read more."}

@@ -17,6 +17,9 @@ const GenNews = () => {
           <NewsCard />
           <NewsCard />
           <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
         </div>
       </div>
     </div>
