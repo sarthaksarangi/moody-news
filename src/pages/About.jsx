@@ -12,10 +12,10 @@ function About() {
             Drowning in negativity? Us too. That's why we created Mood News.
           </p>
           <p className="text-xl leading-relaxed">
-            Our innovative platform uses AI to curate personalized news snippets
-            based on your mood. Whether you're feeling happy, anxious, or
-            anywhere in between, Mood News delivers relevant, bite-sized updates
-            tailored to your emotional state.
+            Our innovative platform uses Machine Learning to curate personalized
+            news snippets based on your mood. Whether you're feeling happy,
+            anxious, or anywhere in between, Mood News delivers relevant,
+            bite-sized updates tailored to your emotional state.
           </p>
         </div>
         <img
