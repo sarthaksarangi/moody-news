@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/dummy.jpg";
-const NewsCard = () => {
+const NewsCard = ({ emotion }) => {
   return (
     <>
       <article className="flex max-w-xl flex-col items-start justify-between">
@@ -14,6 +14,12 @@ const NewsCard = () => {
             className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
           >
             Marketing
+          </a>
+          <a
+            href="#"
+            className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+          >
+            {emotion}
           </a>
         </div>
         <div className="group relative">
