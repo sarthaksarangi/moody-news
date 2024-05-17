@@ -6,8 +6,8 @@ const Navbar = () => {
   const notActiveLink = "text-gray-900";
   return (
     <>
-      <nav className="bg-white border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-7 border-b-2 border-black">
+      <nav className="bg-white border-b-2 border-black">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-7 ">
           <Link
             className="self-center text-3xl font-semibold whitespace-nowrap"
             to="/"
