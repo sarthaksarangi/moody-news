@@ -47,7 +47,9 @@ function About() {
           Browse All News
         </button>
       </div>
-      <p className="text-sm text-stale-300 text-center">Made with ❤️ by Team</p>
+      <p className="text-sm text-stale-300 text-center mt-6">
+        Made with ❤️ by Team
+      </p>
     </section>
   );
 }
