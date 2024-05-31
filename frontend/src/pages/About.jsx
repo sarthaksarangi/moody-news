@@ -5,7 +5,7 @@ function About() {
     <section className="about  text-black px-60 py-2 flex flex-col items-center justify-center mt-10 gap-4 ">
       <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-center justify-between">
         <div className="w-full md:w-1/2">
-          <h1 class=" mt-8 mb-4 text-lg font-extrabold leading-none tracking-tight text-gray-900 md:text-lg lg:text-5xl dark:text-white">
+          <h1 class=" mt-8 mb-4 text-lg font-extrabold leading-none tracking-tight text-gray-900 md:text-lg lg:text-5xl">
             Moody News: News according to your
             <span class="text-button1 dark:text-blue-500"> mood!</span>{" "}
           </h1>
