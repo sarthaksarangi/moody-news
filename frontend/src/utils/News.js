@@ -92,3 +92,18 @@ export const updatedNews = news.map((item) => ({
   ...item,
   emotion: emotions[item.emotion],
 }));
+
+export const emotionColors = {
+  happy: {
+    bg: "bg-emerald-400",
+    text: "text-white",
+  },
+  neutral: {
+    bg: "bg-indigo-400",
+    text: "text-white",
+  },
+  sad: {
+    bg: "bg-red-400",
+    text: "text-white",
+  },
+};
