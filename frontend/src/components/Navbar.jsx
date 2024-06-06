@@ -73,20 +73,6 @@ const Navbar = () => {
                   About
                 </li>
               </NavLink>
-
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? activeLink : notActiveLink
-                }
-                to="/contact"
-              >
-                <li
-                  className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-button md:p-0 text-lg
-                "
-                >
-                  Contact
-                </li>
-              </NavLink>
             </ul>
           </div>
         </div>

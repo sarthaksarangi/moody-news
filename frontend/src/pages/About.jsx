@@ -2,8 +2,8 @@ import React from "react";
 
 function About() {
   return (
-    <section className="about  text-black px-60 py-2 flex flex-col items-center justify-center mt-10 gap-4 ">
-      <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-center justify-between">
+    <section className="about  text-black px-60 py-2 flex flex-col items-center justify-center mt-16 gap-4 ">
+      <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-center justify-between mb-20">
         <div className="w-full md:w-1/2">
           <h1 class=" mt-8 mb-4 text-lg font-extrabold leading-none tracking-tight text-gray-900 md:text-lg lg:text-5xl">
             Moody News: News according to your
@@ -26,16 +26,16 @@ function About() {
         />
       </div>
       <div className="flex flex-wrap justify-center gap-4 mb-4">
-        <div className="bg-gray-900 hover:bg-yellow-400 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
+        <div className="bg-slate-800 hover:g-gray-900 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
           Machine Learning
         </div>
-        <div className="bg-gray-900 hover:bg-yellow-400 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
+        <div className="bg-slate-800 hover:bg-gray-900 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
           Sentiment Analysis
         </div>
-        <div className="bg-gray-900 hover:bg-yellow-400 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
+        <div className="bg-slate-800 hover:g-gray-900 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
           Text Summarization
         </div>
-        <div className="bg-gray-900 hover:bg-yellow-400 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
+        <div className="bg-slate-800 hover:g-gray-900 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
           React
         </div>
       </div>

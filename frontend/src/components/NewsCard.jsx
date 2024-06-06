@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/dummy.jpg";
-import { emotionColors } from "../utils/News";
+import { emotionColors, pallete } from "../utils/News";
 
 const NewsCard = ({ news }) => {
   const [isReadmore, setIsReadmore] = useState(false);
@@ -10,7 +10,7 @@ const NewsCard = ({ news }) => {
     setIsReadmore(!isReadmore);
   };
 
-  const emotionColor = emotionColors[news.emotion.toLowerCase()] || {
+  const emotionColor = pallete[news.emotion.toLowerCase()] || {
     bg: "bg-gray-50",
     text: "text-gray-600",
   };
@@ -25,9 +25,7 @@ const NewsCard = ({ news }) => {
         <time dateTime={news.date} className="text-gray-500">
           {news.date}
         </time>
-        <p className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-          Marketing
-        </p>
+
         <p
           className={`relative z-10 rounded-full px-3 py-1.5 font-medium hover:bg-gray-400 ${emotionColor.bg} ${emotionColor.text}`}
         >
