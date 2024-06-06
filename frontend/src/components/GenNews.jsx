@@ -4,23 +4,20 @@ import { updatedNews } from "../utils/News";
 
 const GenNews = () => {
   return (
-    <div className="bg-white mb-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <div className=" dark:bg-gray-800 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
             Daily News
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 sm:mt-8 sm:pt-16 lg:mx-0 lg:max-w-7xl lg:grid-cols-3">
-          <NewsCard news={updatedNews[0]} />
-          <NewsCard news={updatedNews[1]} />
-          <NewsCard news={updatedNews[2]} />
-          <NewsCard news={updatedNews[3]} />
-          <NewsCard news={updatedNews[4]} />
-          <NewsCard news={updatedNews[5]} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {updatedNews.slice(0, 6).map((news, index) => (
+            <NewsCard key={index} news={news} />
+          ))}
         </div>
       </div>
     </div>

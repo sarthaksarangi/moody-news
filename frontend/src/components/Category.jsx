@@ -26,21 +26,21 @@ const Category = () => {
           <button
             onClick={() => handleButtonClick("Happy")}
             type="button"
-            className="focus:outline-none text-white bg-blue-500 px-8 py-3.5 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium text-sm me-2  rounded-full mr-5 mb-6  "
+            className="focus:outline-none text-white bg-happy-400 px-8 py-3.5 hover:bg-happy-600 focus:ring-4 focus:ring-happy-300 font-medium text-sm me-2  rounded-full mr-5 mb-6  "
           >
             Happy
           </button>
           <button
             onClick={() => handleButtonClick("Neutral")}
             type="button"
-            className="focus:outline-none text-white bg-orange-500 px-8 py-3.5 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium text-sm me-2  rounded-full mr-5 mb-6  "
+            className="focus:outline-none text-white bg-primary-400 px-8 py-3.5 hover:bg-primary-600 focus:ring-4 focus:ring-primary-300 font-medium text-sm me-2  rounded-full mr-5 mb-6  "
           >
             Neutral
           </button>
           <button
             onClick={() => handleButtonClick("Sad")}
             type="button"
-            className="focus:outline-none text-white bg-red-500 px-8 py-3.5 hover:bg-red-600 focus:ring-4 focus:ring-red-300 font-medium text-sm me-2 rounded-full mr-5 mb-6  "
+            className="focus:outline-none text-white bg-sad-500 px-8 py-3.5 hover:bg-red-600 focus:ring-4 focus:ring-sad-300 font-medium text-sm me-2 rounded-full mr-5 mb-6  "
           >
             Sad
           </button>
