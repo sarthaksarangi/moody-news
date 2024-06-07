@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { emotions, updatedNews } from "../utils/News";
 
 import FilteredNews from "./FilteredNews";
 
-const Category = () => {
+const Category = ({ news }) => {
   const [selectedEmotion, setSelectedEmotion] = useState("");
 
   const handleButtonClick = (emotion) => {
     setSelectedEmotion(emotion);
   };
-  const filteredNews = updatedNews.filter(
-    (item) => item.emotion === selectedEmotion
-  );
+  const filteredNews = news
+    .filter((item) => item.Author != null)
+    .filter((item) => item.Emotion === selectedEmotion);
   console.log(filteredNews);
   return (
     <>

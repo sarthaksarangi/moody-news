@@ -1,3 +1,4 @@
+import axios from "axios";
 export const news = [
   {
     title: "Local Community Garden Thrives",
@@ -139,4 +140,14 @@ export const pallete = {
     bg: "bg-sad-100",
     text: "text-sad-800",
   },
+};
+
+const fetchNews = async () => {
+  const response = await axios.get("http://127.0.0.1:5000/get_news?");
+  return response.data;
+};
+export const getNewsData = async () => {
+  const newsData = await fetchNews();
+  console.log(newsData); // Do something with the news data
+  return newsData;
 };

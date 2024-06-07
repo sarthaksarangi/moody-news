@@ -3,7 +3,7 @@ import { pallete } from "../utils/News";
 import { useNavigate } from "react-router-dom";
 
 const Card = ({ news }) => {
-  const emotionColor = pallete[news.emotion.toLowerCase()] || {
+  const emotionColor = pallete[news.Emotion.toLowerCase()] || {
     bg: "bg-gray-200",
     text: "text-gray-600",
   };
@@ -19,16 +19,20 @@ const Card = ({ news }) => {
           <span
             className={`${emotionColor.bg} ${emotionColor.text} text-xs font-medium mr-2 px-2.5 py-0.5 rounded`}
           >
-            {news.emotion}
+            {news.Emotion}
           </span>
           <span className="text-sm text-gray-500 dark:text-gray-400">
-            {news.date}
+            {news.PublishedAt}
           </span>
         </div>
         <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {news.title}
+          <a href={news.URL} target="_blank" rel="noopener noreferrer">
+            {news.Title}
+          </a>
         </h2>
-        <p className="mb-4 text-gray-700 dark:text-gray-300">{news.content}</p>
+        <p className="mb-4 text-gray-700 dark:text-gray-300">
+          {news.Description}
+        </p>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <img
@@ -37,7 +41,7 @@ const Card = ({ news }) => {
               alt="Bonnie Green avatar"
             />
             <span className="font-medium text-gray-700 dark:text-gray-300">
-              {news.author}
+              {news.Author}
             </span>
           </div>
           <button

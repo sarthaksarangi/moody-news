@@ -15,13 +15,13 @@ const FilteredNews = ({ filteredNews, selectedEmotion }) => {
             <div className="mx-auto max-w-2xl  text-center">
               <p className="mt-1 text-xl leading-8 text-gray-900">
                 You have selected the{" "}
-                <span className="font-bold">{filteredNews[0].emotion}</span>{" "}
+                <span className="font-bold">{filteredNews[0].Emotion}</span>{" "}
                 emotion
               </p>
             </div>
             <div className="mx-auto grid  grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 sm:mt-8 sm:pt-16 lg:mx-0 lg:max-w-7xl lg:grid-cols-3">
               {filteredNews.map((item) => (
-                <NewsCard key={item.title} news={item} />
+                <NewsCard key={item.Title} news={item} />
               ))}
             </div>
           </div>

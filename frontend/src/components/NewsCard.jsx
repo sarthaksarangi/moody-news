@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/dummy.jpg";
-import { emotionColors, pallete } from "../utils/News";
+import { getNewsData, pallete } from "../utils/News";
 
 const NewsCard = ({ news }) => {
   const [isReadmore, setIsReadmore] = useState(false);
@@ -10,7 +10,7 @@ const NewsCard = ({ news }) => {
     setIsReadmore(!isReadmore);
   };
 
-  const emotionColor = pallete[news.emotion.toLowerCase()] || {
+  const emotionColor = pallete[news.Emotion.toLowerCase()] || {
     bg: "bg-gray-50",
     text: "text-gray-600",
   };
@@ -22,22 +22,27 @@ const NewsCard = ({ news }) => {
     >
       <img src={Logo} className="rounded-2xl mb-2" alt="logo" />
       <div className="flex items-center gap-x-4 text-xs">
-        <time dateTime={news.date} className="text-gray-500">
-          {news.date}
+        <time dateTime={news.PublishedAt} className="text-gray-500">
+          {news.PublishedAt}
         </time>
-
         <p
           className={`relative z-10 rounded-full px-3 py-1.5 font-medium hover:bg-gray-400 ${emotionColor.bg} ${emotionColor.text}`}
         >
-          {news.emotion}
+          {news.Emotion}
         </p>
       </div>
       <div className="group relative text-justify">
         <h3 className="mt-3 text-lg font-semibold  leading-6 text-gray-900 group-hover:text-gray-600">
-          {news.title}
+          <a
+            href={news.URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >{`${news.Title.slice(0, 70)}...`}</a>
         </h3>
         <div className="mt-3 text-sm leading-6 text-gray-600 ">
-          {isReadmore ? news.content : `${news.content.slice(0, 100)}...`}
+          {isReadmore
+            ? news.Description
+            : `${news.Description.slice(0, 80)}...`}
         </div>
         <button
           onClick={toggleReadmore}
@@ -53,7 +58,9 @@ const NewsCard = ({ news }) => {
           className="h-10 w-10 rounded-full bg-gray-50"
         />
         <div className="text-sm leading-6">
-          <p className="font-semibold text-gray-900">{news.author}</p>
+          <p className="font-semibold text-gray-900">
+            {news.Author.slice(0, 29)}
+          </p>
           <p className="text-gray-600">Co-Founder / CTO</p>
         </div>
       </div>

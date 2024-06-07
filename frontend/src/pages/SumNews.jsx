@@ -19,9 +19,11 @@ const SumNews = ({ news }) => {
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-2 grid-cols-1 sm:grid-cols-2">
-          {news.map((item) => (
-            <Card key={item.title} news={item} />
-          ))}
+          {news
+            .filter((item) => item.Author != null)
+            .map((item) => (
+              <Card key={item.title} news={item} />
+            ))}
         </div>
       </div>
     </section>

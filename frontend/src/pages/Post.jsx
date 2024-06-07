@@ -15,21 +15,23 @@ const Post = () => {
               <header className="mb-6 not-format">
                 <div className="flex items-center justify-between mb-4">
                   <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-                    {news.title}
+                    {news.Title}
                   </h1>
                   <div className="flex items-center gap-x-2 text-xs">
                     <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
-                      {news.emotion}
+                      {news.Emotion}
                     </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-x-4 text-sm text-gray-500 dark:text-gray-400">
-                  <span>{news.date}</span>
+                  <span>{news.publishedAt}</span>
                   <span>•</span>
-                  <span>By {news.author}</span>
+                  <span>By {news.Author}</span>
                 </div>
               </header>
-
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
+                <p>{news.Description}</p>
+              </div>
               <figure className="mb-6">
                 <img
                   src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-1.png"
@@ -42,7 +44,7 @@ const Post = () => {
               </figure>
 
               <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
-                <p>{news.description}</p>
+                <p>{news.Content}</p>
               </div>
 
               <div className="mt-6 text-center">

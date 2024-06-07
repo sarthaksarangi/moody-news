@@ -1,8 +1,7 @@
 import React from "react";
 import NewsCard from "./NewsCard";
-import { updatedNews } from "../utils/News";
 
-const GenNews = () => {
+const GenNews = ({ updatedNews }) => {
   return (
     <div className=" dark:bg-gray-800 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,9 +14,12 @@ const GenNews = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {updatedNews.slice(0, 6).map((news, index) => (
-            <NewsCard key={index} news={news} />
-          ))}
+          {updatedNews
+            .filter((item) => item.Author != null)
+            .slice(0, 6)
+            .map((news, index) => (
+              <NewsCard key={index} news={news} />
+            ))}
         </div>
       </div>
     </div>

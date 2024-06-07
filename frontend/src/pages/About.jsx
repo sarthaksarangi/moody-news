@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function About() {
+  const navigate = useNavigate();
   return (
     <section className="about  text-black px-60 py-2 flex flex-col items-center justify-center mt-16 gap-4 ">
       <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-center justify-between mb-20">
@@ -25,7 +27,7 @@ function About() {
           alt="Moody News Illustration"
         />
       </div>
-      <div className="flex flex-wrap justify-center gap-4 mb-4">
+      {/* <div className="flex flex-wrap justify-center gap-4 mb-4">
         <div className="bg-slate-800 hover:g-gray-900 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
           Machine Learning
         </div>
@@ -38,9 +40,12 @@ function About() {
         <div className="bg-slate-800 hover:g-gray-900 text-white font-bold py-3 px-6  shadow-md  rounded-full cursor-pointer">
           React
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-center gap-4">
-        <button className="bg-button hover:bg-blue-700 text-white font-bold py-3 px-6  shadow-md  rounded-full">
+        <button
+          className="bg-button hover:bg-blue-700 text-white font-bold py-3 px-6  shadow-md  rounded-full"
+          onClick={() => navigate("/")}
+        >
           Feel Good Now
         </button>
         <button className="bg-gray-200 hover:bg-gray-300 text-slate-700 font-bold py-2 px-6 rounded-full shadow-md">

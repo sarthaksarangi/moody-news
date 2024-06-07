@@ -1,0 +1,5 @@
+newsapi-python
+pandas
+nltk
+scikit-learn
+joblib
