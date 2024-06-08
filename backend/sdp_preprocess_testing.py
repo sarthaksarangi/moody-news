@@ -18,7 +18,7 @@ CORS(app)  # Enable CORS
 nltk.download('stopwords')
 
 # Initialize the News API client
-api = NewsApiClient(api_key="7aed860ab2e44631b7aa20983adf74c3")
+api = NewsApiClient(api_key="")
 
 # Define text preprocessing functions
 def tolowercase(df):
