@@ -1,8 +1,7 @@
-# SDP_model.py
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
@@ -11,7 +10,7 @@ import nltk
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, f1_score, classification_report
 import joblib
 import pickle
 
@@ -72,6 +71,26 @@ model.fit(X_train_bow, Y_train)
 Y_pred = model.predict(X_test_bow)
 accuracy = accuracy_score(Y_test, Y_pred) * 100
 print(f'Accuracy: {accuracy}%')
+
+# # Confusion matrix and classification report
+# conf_matrix = confusion_matrix(Y_test, Y_pred)
+# report = classification_report(Y_test, Y_pred)
+# precision = precision_score(Y_test, Y_pred, average='weighted')
+# recall = recall_score(Y_test, Y_pred, average='weighted')
+# f1 = f1_score(Y_test, Y_pred, average='weighted')
+# print("Confusion Matrix:\n", conf_matrix)
+# print("Classification Report:\n", report)
+# print(f'Precision: {precision}')
+# print(f'Recall: {recall}')
+# print(f'F1 Score: {f1}')
+
+# # Plot confusion matrix heatmap
+# plt.figure(figsize=(8, 6))
+# sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=np.unique(Y), yticklabels=np.unique(Y))
+# plt.xlabel('Predicted Labels')
+# plt.ylabel('True Labels')
+# plt.title('Confusion Matrix Heatmap')
+# plt.show()
 
 # Save the trained model
 with open('model.pkl', 'wb') as file:
